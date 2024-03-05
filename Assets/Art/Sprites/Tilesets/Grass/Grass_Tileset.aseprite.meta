@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7595afd8184686c4d9a8210ae666c5f6
+guid: 4e0d6eacb9a6dbf45ba09a9b72d4531b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Character
+  - name: Grass_Tileset
     originalName: 
-    pivot: {x: 0.7058824, y: -0.071428575}
+    pivot: {x: 0, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 17
-      height: 28
-    spriteID: 1a871280fe1df4b4b992d0c4996701fb
+      width: 0
+      height: 0
+    spriteID: 3dd85474fc5e5ed4381e2374a6f0cca3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,112 +140,28 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: Character_Frame_1
-    originalName: 
-    pivot: {x: 0.7058824, y: -0.074074075}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 29
-      y: 4
-      width: 17
-      height: 27
-    spriteID: 2e54859c239ee94469c5638bdb23c157
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 29, y: 4}
-  - name: Character_Frame_2
-    originalName: 
-    pivot: {x: 0.7058824, y: -0.071428575}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 40
-      width: 17
-      height: 28
-    spriteID: e1467f21f7fac8b47a7b810032697159
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 40}
-  - name: Character_Frame_3
-    originalName: 
-    pivot: {x: 0.7058824, y: -0.071428575}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 76
-      width: 17
-      height: 28
-    spriteID: a7b85a38eb5708543bf702626f218512
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 76}
+    uvTransform: {x: -28, y: -28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1246400679
-    name: Character
+    guid: -932271371
+    name: Grass_Tileset
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Character_Frame_0
+    - name: Grass_Tileset
       frameIndex: 0
       cellRect:
-        x: 4
-        y: 2
-        width: 17
-        height: 28
-      spriteId: 1a871280fe1df4b4b992d0c4996701fb
-    - name: Character_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 4
-        y: 2
-        width: 17
-        height: 27
-      spriteId: 2e54859c239ee94469c5638bdb23c157
-    - name: Character_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 4
-        y: 2
-        width: 17
-        height: 28
-      spriteId: e1467f21f7fac8b47a7b810032697159
-    - name: Character_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 4
-        y: 2
-        width: 17
-        height: 28
-      spriteId: a7b85a38eb5708543bf702626f218512
+        x: 144
+        y: 144
+        width: 32
+        height: 32
+      spriteId: 3dd85474fc5e5ed4381e2374a6f0cca3
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 320, y: 320}
