@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     Vector2 movementInput;
     Rigidbody2D rb;
+    Animator animator;
+
+    SpriteRenderer spriteRenderer;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
@@ -19,6 +22,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate() {
@@ -34,21 +39,37 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
+            animator.SetBool("isMoving", success);
+
+        } else {
+            animator.SetBool("isMoving", false);
         }
+
+        // Set direction to movement direction
+
+        if (movementInput.x < 0){
+            spriteRenderer.flipX = true;
+        } else if (movementInput.x > 0)
+            spriteRenderer.flipX = false;
+
     }
 
     private bool TryMove(Vector2 direction) {
-        // Check for potential collisions
-        int count = rb.Cast(
-            direction, // X andy Y values between -1 and 1 that represent the direction from the body to look for collisions
-            movementFilter, // The settings that determine where a collision can occur
-            castCollisions, // List of collisions to store the found collisions into after the cast is finished
-            moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
-        
-        // If nothing exists in the players way they can Move!
-        if (count == 0) {
-            rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * direction);
-            return true;
+        if(direction != Vector2.zero) {
+            // Check for potential collisions
+            int count = rb.Cast(
+                direction, // X andy Y values between -1 and 1 that represent the direction from the body to look for collisions
+                movementFilter, // The settings that determine where a collision can occur
+                castCollisions, // List of collisions to store the found collisions into after the cast is finished
+                moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
+            
+            // If nothing exists in the players way they can Move!
+            if (count == 0) {
+                rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * direction);
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
