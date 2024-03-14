@@ -1,0 +1,5 @@
+1. Open cmd prompt
+2. use this command: cd C:\Users\xmari\OneDrive\Desktop\Git Hub\2D_Game
+3. use this command: git add .
+4 use this command: git commit -m "YOUR COMMIT MESSAGE"
+5. use this command: git push
